@@ -1,0 +1,8 @@
+{
+    "name": "new",
+    "content": [
+        "src/components/content/index.html",
+        "src/components/header/index.html",
+        "src/components/footer/index.html"
+    ]
+}

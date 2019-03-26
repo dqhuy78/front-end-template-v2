@@ -1,0 +1,10 @@
+node_modules/*
+dist/*
+src/components/*/*.css
+src/components/*/*.map
+template/components/*.css
+template/components/*.map
+src/pages/*/*.css
+src/pages/*/*.map
+template/pages/*.css
+template/pages/*.map
