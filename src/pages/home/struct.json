@@ -1,8 +1,0 @@
-{
-    "name": "home",
-    "content": [
-        "src/components/header/index.html",
-        "src/components/content/index.html",
-        "src/components/footer/index.html"
-    ]
-}

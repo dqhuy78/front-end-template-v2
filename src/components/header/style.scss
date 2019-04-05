@@ -1,3 +1,212 @@
+.mheader {
+    $self: &;
+    position: relative;
+    background-image: url(./assets/main.png);
+    background-position: top center;
+    &__wrapper {
+        padding: 0 15px;
+    }
+    &__main {
+        height: 64px;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    &__logo {
+        a {
+            font-weight: bold;
+            color: #fff;
+            font-size: 22px;
+            text-decoration: none;
+        }
+    }
+    &__highlight {
+        color: #44D4D8;
+    }
+    &__btn-nav {
+        position: absolute;
+        color: #fff;
+        font-size: 20px;
+        padding: 5px;
+        &--left {
+            left: 0px;
+        }
+        &--right {
+            right: 5px;
+            top: 3px;
+        }
+    }
+    &__nav {
+        position: fixed;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: -1;
+        opacity: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        transition: all 0.6s ease;
+        &--active {
+            opacity: 1;
+            z-index: 99;
+            #{$self}__nav-wrapper {
+                left: 0;
+            }
+        }
+    }
+    &__nav-wrapper {
+        width: 90%;
+        max-width: 320px;
+        height: 100%;
+        background-color: #fff;
+        z-index: 999;
+        left: -100%;
+        position: relative;
+        transition: all 0.6s ease;
+
+    }
+    &__nav-main {
+        background: linear-gradient(90deg, #2E0497 0%, #3F0C98 31.26%, #F764A9 100%);
+        height: 64px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__menu {
+        margin-top: 35px;
+    }
+    &__link {
+        display: block;
+        line-height: 60px;
+        padding-left: 35px;
+        font-size: 16px;
+        i {
+            margin-right: 10px;
+        }
+        &--active {
+            background-color: #c6f2f3;
+            padding-left: 30px;
+            border-left: 5px solid #44D4D8;
+        }
+    }
+    &__btn-join {
+        border-radius: 25px;
+        background-color: #44D4D8;
+        border: none;
+        color: #fff;
+        font-weight: bold;
+        padding: 15px 26px;
+        width: 80%;
+        margin: 50px auto;
+        display: block;
+    }
+}
+
 .header {
-    background-color: yellow;
+    display: none;
+}
+
+@media only screen and (min-width: 768px) {
+    .mheader {
+        display: none;
+    }
+    .header {
+        display: flex;
+        height: 64px;
+        align-items: center;
+        padding: 0 20px;
+        justify-content: space-between;
+        z-index: 99;
+        position: relative;
+        top: 10px;
+        &__nav {
+            display: flex;
+            align-items: center;
+            padding-bottom: 5px;
+        }
+        &__nav-main {
+            display: flex;
+        }
+        &__item {
+            margin-right: 20px;
+            position: relative;
+            &::after {
+                content: '';
+                position: absolute;
+                height: 2px;
+                width: 100%;
+            }
+            &--active {
+                a {
+                    color: #44D4D8;
+                }
+                &::after {
+                    background-color: #44D4D8;
+                }
+            }
+        }
+        &__link {
+            display: block;
+            color: #fff;
+            font-size: 15px;
+            cursor: pointer;
+            padding: 5px;
+        }
+        &__btn-join {
+            border-radius: 25px;
+            background-color: #44D4D8;
+            border: none;
+            color: #fff;
+            font-weight: bold;
+            padding: 10px 17px;
+            margin: 50px auto;
+            display: block;
+            cursor: pointer;
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 960px) {
+    .header {
+        padding: 0 40px;
+        &__item {
+            margin-right: 30px;
+        }
+        &__link {
+            font-size: 17px;
+        }
+        &__btn-join {
+            font-size: 17px;
+        }
+    }
+    .mheader__logo a {
+        font-size: 24px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .header {
+        top: 20px;
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .header {
+        padding: 0 50px;
+        top: 30px;
+        &__link {
+            font-size: 18px;
+        }
+        &__btn-join {
+            font-size: 18px;
+        }
+    }
+    .mheader__logo a {
+        font-size: 26px;
+    }
 }

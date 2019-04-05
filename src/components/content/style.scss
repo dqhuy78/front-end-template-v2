@@ -1,8 +1,87 @@
-.content {
-    img {
-        width: 50%;
-        height: auto;
+.jumbotron {
+    position: relative;
+    text-align: center;
+    &__bgr {
+        width: 100%;
+    }
+    &__wrapper {
+        width: calc(100% - 40px);
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &__title {
+        color: #44D4D8;
+        font-size: 19px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    &__sub-title {
+        color: #fff;
+        font-weight: bold;
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+    &__btn {
+        border-radius: 25px;
+        background-color: #44D4D8;
+        border: none;
+        color: #fff;
+        font-weight: bold;
+        padding: 13px 20px;
         display: block;
         margin: 0 auto;
+        cursor: pointer;
+        &:focus {
+            outline: none;
+        }
+    }
+}
+@media only screen and (min-width: 768px) {
+    .jumbotron {
+        margin-top: -64px;
+        &__title {
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+        &__sub-title {
+            font-size: 40px;
+            margin-bottom: 35px;
+        }
+        &__btn {
+            font-size: 18px;
+        }
+    }
+}
+@media only screen and (min-width: 960px) {
+    .jumbotron {
+        &__title {
+            font-size: 30px;
+            margin-bottom: 25px;
+        }
+        &__sub-title {
+            font-size: 50px;
+            margin-bottom: 50px;
+        }
+        &__btn {
+            font-size: 18px;
+        }
+    }
+}
+@media only screen and (min-width: 1280px) {
+    .jumbotron {
+        &__title {
+            font-size: 40px;
+            margin-bottom: 30px;
+        }
+        &__sub-title {
+            font-size: 60px;
+            margin-bottom: 70px;
+        }
+        &__btn {
+            font-size: 18px;
+        }
     }
 }

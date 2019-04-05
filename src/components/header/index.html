@@ -1,15 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./style.css">
-    <title>Component</title>
+    <link rel="stylesheet" href="../../../template/_reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <title>Sun Asterisk R&D</title>
 </head>
+
 <body>
+    <section class="mheader">
+        <div class="mheader__wrapper">
+            <div class="mheader__main">
+                <div id="js__active-nav" class="mheader__btn-nav mheader__btn-nav--left">
+                    <i class="fas fa-align-left"></i>
+                </div>
+                <div class="mheader__logo">
+                    <a href='#'>
+                        Sun Asterisk <span class="mheader__highlight">R&D</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="js__mnav" class="mheader__nav">
+            <div class="mheader__nav-wrapper">
+                <div class="mheader__nav-main">
+                    <div class="mheader__logo">
+                        <a href='#'>
+                            Sun Asterisk <span class="mheader__highlight">R&D</span>
+                        </a>
+                    </div>
+                    <div id="js__deactive-nav" class="mheader__btn-nav mheader__btn-nav--right">
+                        <i class="fas fa-times"></i>
+                    </div>
+                </div>
+                <ul class="mheader__menu">
+                    <li class="mheader__item">
+                        <a class="mheader__link mheader__link--active">
+                            <i class="fas fa-home"></i> Home
+                        </a>
+                    </li>
+                    <li class="mheader__item">
+                        <a class="mheader__link">
+                            <i class="fas fa-trophy"></i> Achievements
+                        </a>
+                    </li>
+                    <li class="mheader__item">
+                        <a class="mheader__link">
+                            <i class="fas fa-newspaper"></i> Publications
+                        </a>
+                    </li>
+                </ul>
+                <button class="mheader__btn-join">
+                    Join Us <i class="fas fa-long-arrow-alt-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
     <section class="header">
-        HEADER
+        <div class="header__logo">
+            <div class="mheader__logo">
+                <a href='#'>
+                    Sun Asterisk <span class="mheader__highlight">R&D</span>
+                </a>
+            </div>
+        </div>
+        <div class="header__nav">
+            <ul class="header__nav-main">
+                <li class="header__item header__item--active">
+                    <a class="header__link header__link--active">
+                        Home
+                    </a>
+                </li>
+                <li class="header__item">
+                    <a class="header__link">
+                        Achievements
+                    </a>
+                </li>
+                <li class="header__item">
+                    <a class="header__link">
+                        Publications
+                    </a>
+                </li>
+            </ul>
+            <button class="header__btn-join">
+                Join Us <i class="fas fa-long-arrow-alt-right"></i>
+            </button>
+        </div>
     </section>
 </body>
+
 </html>

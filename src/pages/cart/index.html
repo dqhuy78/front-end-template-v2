@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,22 +10,18 @@
 
     <link rel="stylesheet" href="../../components/header/style.css">
     <link rel="stylesheet" href="../../components/content/style.css">
-    <link rel="stylesheet" href="../../components/footer/style.css">
 </head>
-
 <body>
-    <div class="new">
-        <div class="include" data-source="../../components/content/index.html"></div>
+    <div class="TEMPLATE">
         <div class="include" data-source="../../components/header/index.html"></div>
-        <div class="include" data-source="../../components/footer/index.html"></div>
+        <div class="include" data-source="../../components/content/index.html"></div>
     </div>
-
 </body>
     <script type="text/javascript">
         $(function () {
             $(".include").each(function () {
                 $(this).load(this.dataset.source)
             })
-        });
+        })
     </script>
 </html>
